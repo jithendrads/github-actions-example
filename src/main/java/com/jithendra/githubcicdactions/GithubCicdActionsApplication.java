@@ -1,0 +1,27 @@
+package com.jithendra.githubcicdactions;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@RestController
+public class GithubCicdActionsApplication {
+	@GetMapping("/welcome")
+	public String welcome()
+	{
+		return "welcome to github action cicd";
+	}
+
+//	echo "# github-actions-example" >> README.md
+//	git init
+//	git add README.md
+//	git commit -m "first commit"
+//	git branch -M main
+//	git remote add origin https://github.com/jithendrads/github-actions-example.git
+//	git push -u origin main
+
+	public static void main(String[] args) {
+		SpringApplication.run(GithubCicdActionsApplication.class, args);
+	}
+
+}
